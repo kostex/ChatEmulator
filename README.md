@@ -13,10 +13,10 @@
 | Another good solution could be a Raspberry Pi with a LAMP server.
 | If installing on a 'regular' webserver, be aware of the dangers!
 
-| There are three entry points:
-| http://webserveraddress/path/leerling.php?groep=1 (a student should open this)
-| http://webserveraddress/path/leerlingt.php?groep=1 (a student or teacher should open this)
-| http://webserveraddress/path/tester.php?groep=1 (the teacher should open this)
+| There are three entry points:  
+| http://webserveraddress/path/leerling.php?groep=1 (a student should open this)  
+| http://webserveraddress/path/leerlingt.php?groep=1 (a student or teacher should open this)  
+| http://webserveraddress/path/tester.php?groep=1 (the teacher should open this)  
 
 | The number 1 behind groep= can be chosen between 1 and 8 to have multiple sessions on one server.
 
