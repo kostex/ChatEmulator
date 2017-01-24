@@ -10,8 +10,11 @@
 | Installing:
 | This software has to be installed on a webserver (local server would be more secure).  
 | A good local solution would be http://www.uniformserver.com which could run from a local harddisk/usb stick on a Windows machine.  
+
 | Another good solution could be a Raspberry Pi with a LAMP server.  
 | If installing on a 'regular' webserver, be aware of the dangers!  
+| If installing on a Windows based server, please check the folder "Windows_CRLF_Problem"  
+| Replace the same named files in root folder with these..  
 
 | There are three entry points:  
 | http://webserveraddress/path/leerling.php?groep=1 (a student should open this)  
