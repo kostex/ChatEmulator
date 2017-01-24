@@ -1,5 +1,5 @@
 # ChatEmulator
-| Nederlandstalige WebServer Chat Emulator t.b.v. scholen/instellingen om kinderen te leren omgaan met de gevaren van online chatten.
+| Nederlandstalige WebServer Chat Emulator t.b.v. scholen/instellingen om kinderen te leren omgaan met de gevaren van online chatten.  
 
 | Oorspronkelijk gemaakt voor speciaal onderwijs school "ZMLK de Maaskei" als een vakantie project.  
 | Deze school wilde graag een gereedschap om deze (kwetsbare) kinderen te leren omgaan met de gevaren van chatten zoals pesten, privacy en misbruik.  
