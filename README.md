@@ -18,7 +18,7 @@ http://webserveraddress/path/leerling.php?groep=1 (a student should open this)
 http://webserveraddress/path/leerlingt.php?groep=1 (a student or teacher should open this)
 http://webserveraddress/path/tester.php?groep=1 (the teacher should open this)
 
-the number 1 behind groep= can be chosen between 1 and 8 to have multiple sessions on one server.
+The number 1 behind groep= can be chosen between 1 and 8 to have multiple sessions on one server.
 
 In the images/ folder you can put predefined images with both 'ok' pictures and 'nono' pictures. Choose them yourself
 or ignore.
