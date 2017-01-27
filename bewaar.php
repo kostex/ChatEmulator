@@ -10,8 +10,13 @@ if ( $groep != '' ) {
 			$naam = isset( $_POST['naam'] ) ? $_POST['naam'] : 'Frits';
 			$naam = substr($line,7,strpos($line,'|')-7);
 			$bericht = substr($line,strpos($line,'|')+1);
-			$bericht = substr($bericht,0,strlen($bericht)-6);
-			$tijd = substr($line,-6,5);
+			if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+				$bericht = substr($bericht,0,strlen($bericht)-7);
+				$tijd = substr($line,-7,5);
+			} else {
+				$bericht = substr($bericht,0,strlen($bericht)-6);
+				$tijd = substr($line,-6,5);
+			}
 			$samenstel = $samenstel . "<div id='" . $id . "' class='";
 			if($naam==$_POST['naam']) {
 				$samenstel = $samenstel . "rechts";
