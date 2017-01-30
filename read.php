@@ -1,7 +1,13 @@
 <?php	
 $ide = isset( $_POST['ide'] ) ? $_POST['ide'] : '';
 $groep = isset( $_POST['groep'] ) ? $_POST['groep'] : '';
-
+$win_or_linux_server = trim(file_get_contents('./win_or_linux_server.txt'));
+$trim_amount=6;
+if ($win_or_linux_server == 'linux') {
+	$trim_amount=6;
+}	else {
+	$trim_amount=7;
+}
 $samenstel = '';
 if ( $groep != '' ) {
 	if ($ide=='') {
@@ -14,8 +20,8 @@ if ( $groep != '' ) {
 				$id = substr($line,0,7);
 				$naam = substr($line,7,strpos($line,'|')-7);
 				$bericht = substr($line,strpos($line,'|')+1);
-				$bericht = substr($bericht,0,strlen($bericht)-6);
-				$tijd = substr($line,-6,5);
+				$bericht = substr($bericht,0,strlen($bericht)-$trim_amount);
+				$tijd = substr($line,-$trim_amount,5);
 				$samenstel = $samenstel . "<div id='" . $id . "' class='";
 				if($naam==$_POST['naam']) {
 					$samenstel = $samenstel . "rechts";
@@ -50,8 +56,8 @@ if ( $groep != '' ) {
 						$id = substr($line,0,7);
 						$naam = substr($line,7,strpos($line,'|')-7);
 						$bericht = substr($line,strpos($line,'|')+1);
-						$bericht = substr($bericht,0,strlen($bericht)-6);
-						$tijd = substr($line,-6,5);
+						$bericht = substr($bericht,0,strlen($bericht)-$trim_amount);
+						$tijd = substr($line,-$trim_amount,5);
 						$samenstel = $samenstel . "<div id='" . $id . "' class='";
 						if($naam==$_POST['naam']) {
 							$samenstel = $samenstel . "rechts";

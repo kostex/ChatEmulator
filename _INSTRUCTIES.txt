@@ -12,8 +12,7 @@ Een goede oplossing biedt http://www.uniformserver.com
 Deze WAMP server kan zelfs op een portable USB stick draaien en daarmee onafhankelijk van uw eigen servers.
 Een andere oplossing kan een Raspberry Pi met LAMP server zijn.
 Let op: Installatie op een openbare server brengt gevaren met zich mee! Ben daarvan bewust!
-
-Mocht u van Uniformserver gebruik maken, dan overschrijf de bestanden in de hoofdmap met die van de map "Windows_CRLF_Problem".
+Het bestand "win_or_linux_server.txt" moet het woord 'linux' of 'windows' bevatten al naar gelang uw webserver op windows of linux draait.
 
 Er zijn 3 adressen na installatie:
 http://webserveraddress/path/leerling.php?groep=1 (een student opent dit)

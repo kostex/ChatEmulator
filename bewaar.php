@@ -1,4 +1,11 @@
 <?php
+$win_or_linux_server = trim(file_get_contents('./win_or_linux_server.txt'));
+$trim_amount=6;
+if ($win_or_linux_server=='linux') {
+	$trim_amount=6;
+}	else {
+	$trim_amount=7;
+}
 $groep = isset( $_POST['groep'] ) ? $_POST['groep'] : '';
 if ( $groep != '' ) { 
 	$file=fopen($groep . "/chatlog.txt","r");
@@ -10,13 +17,8 @@ if ( $groep != '' ) {
 			$naam = isset( $_POST['naam'] ) ? $_POST['naam'] : 'Frits';
 			$naam = substr($line,7,strpos($line,'|')-7);
 			$bericht = substr($line,strpos($line,'|')+1);
-			if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-				$bericht = substr($bericht,0,strlen($bericht)-7);
-				$tijd = substr($line,-7,5);
-			} else {
-				$bericht = substr($bericht,0,strlen($bericht)-6);
-				$tijd = substr($line,-6,5);
-			}
+			$bericht = substr($bericht,0,strlen($bericht)-$trim_amount);
+			$tijd = substr($line,-$trim_amount,5);
 			$samenstel = $samenstel . "<div id='" . $id . "' class='";
 			if($naam==$_POST['naam']) {
 				$samenstel = $samenstel . "rechts";

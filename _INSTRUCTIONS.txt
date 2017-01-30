@@ -13,8 +13,7 @@ A good local solution would be http://www.uniformserver.com which could run from
 
 Another good solution could be a Raspberry Pi with a LAMP server.
 If installing on a 'regular' webserver, be aware of the dangers!
-If installing on a Windows based server, please check the folder "Windows_CRLF_Problem"
-Replace the same named files in root folder with these..
+The file "win_or_linux_server.txt" needs to contain the word 'linux' or 'windows' corresponding with the server type you're running the application on.
 
 There are three entry points:
 http://webserveraddress/path/leerling.php?groep=1 (a student should open this)

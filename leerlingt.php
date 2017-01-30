@@ -24,7 +24,7 @@
 					$ip = $_SERVER['REMOTE_ADDR'];
 					$bro = $_SERVER['HTTP_USER_AGENT'];
 					$regel = date('Y-m-d H:i:s') . ' | ' . $ip . ' | ' . $caller . ' | ' . $bro . PHP_EOL;
-					$file=fopen('logs/lieske.txt','a');
+					$file=fopen('logs/ip_log.txt','a');
 					fputs($file,$regel);
 					fclose($file);
 				 ?>
